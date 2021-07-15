@@ -5,15 +5,15 @@ from numpy import asarray
 img = Image.open('Assignments/Week 1/Assignment 1/assets/input/input.jpg')
 img_array = asarray(img)
 print(type(img_array))
-print(img_array)
+print(img_array.shape)
 
 i = 0
-inverted_img_array = numpy.empty((1000, 1000, 3), numpy.uint8)
-grayscale_img_array = numpy.empty((1000, 1000, 3), numpy.uint8)
+inverted_img_array = numpy.empty((len(img_array), len(img_array[0]), len(img_array[0, 0])), numpy.uint8)
+grayscale_img_array = numpy.empty((len(img_array), len(img_array[0]), len(img_array[0, 0])), numpy.uint8)
 while(i < len(img_array)):
     j = 0
     while(j < len(img_array[0])):
-        gray_scale_value = ((img_array[i][j][0] + img_array[i][j][1] + img_array[i][j][2])/(3))
+        gray_scale_value = ((int(img_array[i][j][0]) + int(img_array[i][j][1]) + int(img_array[i][j][2]))/(3))
         grayscale_img_array[i][j] = [gray_scale_value, gray_scale_value, gray_scale_value]
         inverted_img_array[i][j] = [255 - img_array[i][j][0], 256 - img_array[i][j][1], 256 - img_array[i][j][2]]
         j += 1
