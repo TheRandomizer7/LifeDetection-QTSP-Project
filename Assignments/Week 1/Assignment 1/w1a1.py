@@ -2,7 +2,7 @@ import numpy
 from PIL import Image
 from numpy import asarray
 
-img = Image.open('Assignments/Week 1/Assignment 1/assets/input/input.jpg')
+img = Image.open('Assignments/Week 1/Assignment 1/assets/input/input_image.jpg')
 img_array = asarray(img)
 
 i = 0
