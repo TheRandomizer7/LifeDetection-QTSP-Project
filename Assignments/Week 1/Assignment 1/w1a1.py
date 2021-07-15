@@ -4,8 +4,6 @@ from numpy import asarray
 
 img = Image.open('Assignments/Week 1/Assignment 1/assets/input/input.jpg')
 img_array = asarray(img)
-print(type(img_array))
-print(img_array.shape)
 
 i = 0
 inverted_img_array = numpy.empty((len(img_array), len(img_array[0]), len(img_array[0, 0])), numpy.uint8)
