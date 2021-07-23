@@ -1,0 +1,5 @@
+Differences between images:
+
+BGR - Appears to replace the blues with the reds and vice versa.
+HSV - Don't understand what exactly happens here, but the image becomes very red and the black spots are replaced with green and an overall very weird distorted look.
+HLS - The image is similar to HSV but much more on the green side but still very different from HSV in terms of detail i.e. less distorted than the HSV image.
