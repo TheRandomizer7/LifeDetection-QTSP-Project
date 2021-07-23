@@ -1,6 +1,5 @@
 import cv2
 import numpy
-import argparse
 
 image = cv2.imread('Assignments/Week 2/Assignment 2/assets/input/input_image.jpg')
 gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
@@ -11,7 +10,6 @@ if circles is not None:
     circles = numpy.array(circles)
     circles = circles.astype(numpy.uint16)
     circles = circles.reshape((int(numpy.product(circles.shape)/3), 3))
-    print(circles)
     for circle_to_draw in circles:
         x = circle_to_draw[0]
         y = circle_to_draw[1]
