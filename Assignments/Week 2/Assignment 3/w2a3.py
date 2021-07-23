@@ -32,7 +32,7 @@ def maxOccuringPixel(pixel_count):
 
 pixel_count = numpy.zeros((256, 256, 256), numpy.int64)
 
-image = cv2.imread('Assignments/Week 2/Assignment 3/assets/input/input_image.jpeg')
+image = cv2.imread('Assignments/Week 2/Assignment 3/assets/input/input_image.jpg')
 image_nparr = numpy.array(image)
 image_nparr = image_nparr.astype(numpy.uint16)
 image_nparr = image_nparr.reshape((int(numpy.product(image_nparr.shape)/3), 3))
@@ -53,7 +53,7 @@ while i < 5:
         while k <= radius_of_colours_to_ignore:
             l = -radius_of_colours_to_ignore
             while l <= radius_of_colours_to_ignore:
-                if(pixel[0] + j < 256 and pixel[0] + j > 0 and pixel[1] + k < 256 and pixel[1] + k > 0 and pixel[2] + l < 256 and pixel[2] + l > 0):
+                if(pixel[0] + j < 256 and pixel[0] + j >= 0 and pixel[1] + k < 256 and pixel[1] + k >= 0 and pixel[2] + l < 256 and pixel[2] + l >= 0):
                     pixel_count[pixel[0] + j][pixel[1] + k][pixel[2] + l] = 0
                 l += 1
             k += 1
