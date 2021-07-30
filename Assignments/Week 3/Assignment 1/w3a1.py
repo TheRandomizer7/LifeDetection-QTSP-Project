@@ -1,6 +1,5 @@
 import cv2
 import numpy
-from numpy.lib.type_check import imag
 
 camera = cv2.VideoCapture(0)
 return_value, image = camera.read()
