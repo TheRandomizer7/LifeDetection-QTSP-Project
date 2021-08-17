@@ -1,10 +1,10 @@
 import cv2
 import numpy
 
-camera = cv2.VideoCapture(0)
-return_value, image = camera.read()
+# camera = cv2.VideoCapture(0)
+# return_value, image = camera.read()
 
-# image = cv2.imread("Assignments/Week 3/Assignment 1/assets/input/input_image_3.jpg")
+image = cv2.imread("Assignments/Week 3/Assignment 1/assets/input/input_image_2.jpg")
 
 gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 output_image = numpy.array(image)
@@ -51,7 +51,7 @@ else:
     cv2.circle(output_image, (start_x, start_y), 5, (0, 0, 255), 10)
     cv2.circle(output_image, (end_x, end_y), 5, (0, 0, 255), 10)
     cv2.putText(output_image, "distance - " + str(distance) + " units", (int((start_x + end_x)/2 + 10), int((start_y + end_y)/2) + 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
-    cv2.imwrite('Assignments/Week 3/Assignment 1/assets/output/output_image.jpg', output_image)
+    cv2.imwrite('Assignments/Week 3/Assignment 1/assets/output/output_image_2.jpg', output_image)
 
     print("program exited, check output image")
 
