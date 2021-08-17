@@ -51,6 +51,7 @@ else:
     cv2.circle(output_image, (start_x, start_y), 5, (0, 0, 255), 10)
     cv2.circle(output_image, (end_x, end_y), 5, (0, 0, 255), 10)
     cv2.putText(output_image, "distance - " + str(distance) + " units", (int((start_x + end_x)/2 + 10), int((start_y + end_y)/2) + 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
+    print("distance - " + str(distance) + " units")
     cv2.imwrite('Assignments/Week 3/Assignment 1/assets/output/output_image.jpg', output_image)
 
     print("program exited, check output image")
